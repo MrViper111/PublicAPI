@@ -344,7 +344,7 @@ public class HypixelAPI {
         try {
             cause = Utilities.GSON.fromJson(response.getBody(), JsonObject.class).get("cause").getAsString();
         } catch (JsonSyntaxException ignored) {
-            cause = "Unknown (body is not json)";
+            cause = "Unknown (body is not JSON)";
         }
 
         throw new BadStatusCodeException(response.getStatusCode(), cause);
